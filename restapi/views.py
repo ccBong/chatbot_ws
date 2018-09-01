@@ -19,29 +19,29 @@ def answer(request):
     datacontent = received_json_data['content']
  
     if datacontent == 'name':
-        today = "Cho Chan Bong"
+        myName = "Cho Chan Bong"
  
         return JsonResponse({
                 'message': {
-                    'text': today
+                    'text': myName
                 },
                 'keyboard': {
                     'type':'buttons',
-                    'buttons':['today','tomorrow']
+                    'buttons':['name','now']
                 }
  
             })
  
     elif datacontent == 'now':
-        tomorrow = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        dateNow = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
  
         return JsonResponse({
                 'message': {
-                    'text': tomorrow
+                    'text': dateNow
                 },
                 'keyboard': {
                     'type':'buttons',
-                    'buttons':['today','tomorrow']
+                    'buttons':['name','now']
                 }
  
             })
