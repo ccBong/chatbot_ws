@@ -8,7 +8,7 @@ def keyboard(request):
     
     return JsonResponse({
         'type':'buttons',
-        'buttons':['today','tomorrow']
+        'buttons':['name','now']
     })
  
 @csrf_exempt
